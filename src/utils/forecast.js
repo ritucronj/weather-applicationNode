@@ -9,7 +9,8 @@ request({ url,json:true},(error,{body})=>{
     }else if(body.error){
           callback("Unable to find Location",undefined);
     }else{
-        const data=body.current.weather_descriptions[0]+" It is "+body.current.temperature+ " degrees Farhenheit out.There is "+body.current.precip+"% chance of rain"
+        const data=body.current.weather_descriptions[0]+" It is "+body.current.temperature+ " degrees Farhenheit out.There is "+body.current.precip+"% chance of rain.The Humidity in the weather is,"+body.current.humidity;
+        
            callback(undefined,data);
     }
 
