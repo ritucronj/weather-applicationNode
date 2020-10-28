@@ -4,7 +4,7 @@ const input=document.getElementById('location');
 
  document.getElementById('inputform').addEventListener('submit',(e)=>{
     display.innerHTML='Loading....';
- fetch(`http://localhost:3000/weather?address=${input.value}`).then(response=>response.json())
+ fetch(`/weather?address=${input.value}`).then(response=>response.json())
          .then(data=>{
              if(data.error){
                 display.innerHTML=data.error;
